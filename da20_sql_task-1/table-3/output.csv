@@ -1,0 +1,6 @@
+"id","email","phone_number","alternate_contact","name","created_at"
+1,"john.doe@example.com","9876543210","9123456780","John Doe","2025-07-03 14:48:01.48024"
+2,"jane.smith@example.com","8765432109","9988776655","Jane Smith","2025-07-03 14:48:01.48024"
+3,"alice.wonder@example.com","7654321098","8877665544","Alice Wonder","2025-07-03 14:48:01.48024"
+4,"bob.marley@example.com","6543210987","7766554433","Bob Marley","2025-07-03 14:48:01.48024"
+5,"charlie.brown@example.com","5432109876","6655443322","Charlie Brown","2025-07-03 14:48:01.48024"

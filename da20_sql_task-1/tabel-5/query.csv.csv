@@ -1,0 +1,36 @@
+drop table if exists payments;
+
+CREATE TABLE payments (
+    id SERIAL PRIMARY KEY,
+    payment_reference VARCHAR(50) UNIQUE NOT NULL,
+    amount DECIMAL(10, 2),
+    tax_amount DECIMAL(10, 2),
+    payment_method VARCHAR(50),
+    payment_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    customer_name VARCHAR(100)
+);
+
+
+INSERT INTO payments (payment_reference, amount, tax_amount, payment_method, customer_name) VALUES
+('PAY001', 1500.50, 75.00, 'Credit Card', 'John Doe'),
+('PAY002', 2450.75, 122.50, 'UPI', 'Jane Smith'),
+('PAY003', 800.00, 40.00, 'Debit Card', 'Alice Wonder'),
+('PAY004', 350.99, 17.55, 'Cash', 'Bob Marley'),
+('PAY005', 1920.00, 96.00, 'Net Banking', 'Charlie Brown'),
+('PAY006', 3100.50, 155.00, 'Credit Card', 'Michael Scott'),
+('PAY007', 1250.75, 62.50, 'UPI', 'Pam Beesly'),
+('PAY008', 890.00, 44.50, 'Debit Card', 'Jim Halpert'),
+('PAY009', 540.99, 27.05, 'Cash', 'Dwight Schrute'),
+('PAY010', 2800.00, 140.00, 'Net Banking', 'Angela Martin'),
+('PAY011', 1750.50, 87.50, 'Credit Card', 'Kevin Malone'),
+('PAY012', 1980.75, 99.00, 'UPI', 'Oscar Martinez'),
+('PAY013', 670.00, 33.50, 'Debit Card', 'Ryan Howard'),
+('PAY014', 1420.99, 71.05, 'Cash', 'Kelly Kapoor'),
+('PAY015', 2200.00, 110.00, 'Net Banking', 'Stanley Hudson'),
+('PAY016', 1590.00, 79.50, 'Credit Card', 'John Doe'),
+('PAY017', 2430.50, 121.50, 'UPI', 'Jane Smith'),
+('PAY018', 1755.00, 87.75, 'Debit Card', 'Alice Wonder'),
+('PAY019', 460.99, 23.05, 'Cash', 'Bob Marley'),
+('PAY020', 2890.00, 144.50, 'Net Banking', 'Charlie Brown');
+
+select * from payments;

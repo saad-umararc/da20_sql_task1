@@ -1,0 +1,30 @@
+DROP TABLE IF EXISTS suppliers;
+
+CREATE TABLE suppliers (
+    id SERIAL PRIMARY KEY,
+    supplier_name VARCHAR(100) NOT NULL,
+    contact_number BIGINT,
+    rating DECIMAL(3, 2),
+    total_products_supplied INTEGER,
+    city VARCHAR(100),
+    registration_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+INSERT INTO suppliers (supplier_name, contact_number, rating, total_products_supplied, city) VALUES
+('Tech Supplies Inc.', 9876543210, 4.5, 120, 'Mumbai'),
+('Gadget World', 8765432109, 4.2, 95, 'Delhi'),
+('Office Essentials', 7654321098, 4.7, 200, 'Bangalore'),
+('Display Hub', 6543210987, 4.1, 80, 'Chennai'),
+('Daily Needs', 5432109876, 4.3, 150, 'Pune'),
+('Smart Gadgets', 9988776655, 4.6, 180, 'Hyderabad'),
+('Home Essentials', 8877665544, 4.4, 140, 'Ahmedabad'),
+('Urban Tech', 7766554433, 4.5, 160, 'Kolkata'),
+('Super Supplies', 6655443322, 4.2, 130, 'Jaipur'),
+('Tech Bazaar', 5544332211, 4.0, 100, 'Surat'),
+('Quick Deliveries', 9988665544, 4.7, 210, 'Lucknow'),
+('Quality Goods', 8877554433, 4.1, 110, 'Bhopal'),
+('Value Traders', 7766443322, 4.3, 125, 'Indore'),
+('Speedy Supplies', 6655332211, 4.6, 190, 'Nagpur'),
+('Reliable Resources', 5544221100, 4.4, 145, 'Patna');
+
+select * from suppliers
